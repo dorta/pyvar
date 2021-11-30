@@ -1,6 +1,6 @@
 ## Variscite Python Package
 
-The Variscite Python Package as known as **pyvar** is a set of high-level
+The Variscite Python Package known as **pyvar** is a set of high-level
 abstractions that allows any user to develop its own applications regarding
 Machine Learning, multimedia, and more.
 
