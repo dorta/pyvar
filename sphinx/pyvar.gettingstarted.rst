@@ -7,7 +7,7 @@ For Machine Learning API
 Setting Up the Hardware and the BSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. To use the Machine Learning API make sure to have one of the following supported SoMs:
+1. To use the Machine Learning API make sure to have one of the following supported SoMs: ***(Diego - as mentioned in paper commnets , does it apply only to MPLUs ?)***
 
 +-----------------------+-----------------------+
 | `VAR-SOM-MX8M-PLUS`_  | `DART-MX8M-PLUS`_     |
@@ -28,7 +28,7 @@ Setting Up the Hardware and the BSP
 2. Follow the quick instructions below to build the latest Yocto Release. 
 
 * For more information on how to build BSP from source code go to the Variscite `Wiki`_ page.
-* The API supports `VCAM-5640S-DUO`_ and `VCAM-AR0821N`_. To use the Basler one, please see this `tutorial`_.
+* The API supports `VCAM-5640S-DUO`_ and `VCAM-AR0821N`_. To use the Basler one, please see this `tutorial`_. ***(Suggest to mention which camera is which )***
 
 .. _Wiki: https://variwiki.com/
 
@@ -59,7 +59,7 @@ Setting Up the Hardware and the BSP
 Quick Python Package Installation
 ---------------------------------
 
-1. Install the pyvar package using pip3 via Pypi:
+1. Install the pyvar package using pip3 via Pypi: **(Diego : does one have to add pypi repo to hit pythos repo list ? )***
 
 .. code-block:: console
 
