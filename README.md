@@ -13,7 +13,7 @@
     <img src="sphinx/images/variscite-logo-black.png" alt="Logo">
   </a>
 
-<h3 align="center">Python API for Developers</h3>
+<h3 align="center">Python SDK for Embedded ML and Multimedia</h3>
 
   <p align="center">
     This library helps developers to get started with Machine Learning, Multimedia, and more.
@@ -26,7 +26,7 @@
 
 ## About
 
-This repository contains an easy-to-use `Python API` with a set of high-level
+This repository contains an easy-to-use Python SDK/library with a set of high-level
 abstractions that helps any beginning user to learn and develop its applications
 regarding Machine Learning, multimedia, and more.
 
@@ -38,9 +38,9 @@ Make sure you have the latest Yocto BSP:
    * Build it by following the instructions at the [Variscite Wiki](https://variwiki.com/), or;
    * Retrieve the latest image from the [Variscite FTP](https://ftp.variscite.com/files).
 
-### Install the Python API via Pip Tool
+### Install the Python package with pip
 
-To install the prebuilt Python API, use the pip tool:
+To install the prebuilt Python package, use pip:
    ```sh
    pip3 install pyvar
    ```
