@@ -69,7 +69,7 @@ class Overlay:
         """
         inference_position = (3, 20)
         if self.scores_info:
-            if category is CLASSIFICATION:
+            if category == CLASSIFICATION:
                 for idx, (i, score) in enumerate(top_result):
                     label_position = (3, 35 * idx + 60)
                     cv2.putText(
@@ -88,7 +88,7 @@ class Overlay:
                         FONT['size'],
                         FONT['color']['blue'],
                         FONT['thickness'])
-            elif category is DETECTION:
+            elif category == DETECTION:
                 colors = self.generate_colors(labels)
                 image_height, image_width, _ = image.shape
                 for obj in top_result:

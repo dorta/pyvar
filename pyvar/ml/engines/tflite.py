@@ -39,7 +39,8 @@ try:
     from tflite_runtime.interpreter import Interpreter
     from tflite_runtime.interpreter import load_delegate
 except ImportError:
-    sys.exit("No TensorFlow Lite Runtime module found!")
+    Interpreter = None
+    load_delegate = None
 
 from pyvar.ml.config import CLASSIFICATION
 from pyvar.ml.config import DETECTION
@@ -64,7 +65,9 @@ class TFLiteInterpreter:
                  ext_delegate: Optional[List] = None,
                  ext_delegate_path: str = EXT_DELEGATE_PATH):
 
-        if not os.path.isfile(model_file_path):
+        if Interpreter is None:
+            raise ImportError("The optional tflite-runtime package is required for TFLiteInterpreter.")
+        if not isinstance(model_file_path, str) or not os.path.isfile(model_file_path):
             raise ValueError("Must pass a valid model file path.")
 
         if not model_file_path.endswith(".tflite"):

@@ -16,7 +16,7 @@ import numpy as np
 try:
     import ethosu.interpreter as ethosu
 except ImportError:
-    sys.exit("No ethosu package found!")
+    ethosu = None
 
 from multiprocessing import cpu_count
 
@@ -134,7 +134,7 @@ class EthosuInterpreter:
             if **not**, return **False**
         """
         if category is not None:
-            if category is CLASSIFICATION:
+            if category == CLASSIFICATION:
                 output = self.get_output(0, squeeze=True)
                 top_k = output.argsort()[-self.k:][::-1]
                 self.result = []

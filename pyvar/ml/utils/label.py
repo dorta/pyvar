@@ -45,9 +45,9 @@ class Label:
             raise TypeError("Must specify the category")
         else:
             with open(self.labels_file, 'r', encoding='utf-8') as f:
-                if category is CLASSIFICATION:
+                if category == CLASSIFICATION:
                     self.list = [line.strip() for line in f.readlines()]
-                elif category is DETECTION:
+                elif category == DETECTION:
                     p = re.compile(r'\s*(\d+)(.+)')
                     lines = (p.match(line).groups() for line in f.readlines())
                     self.list = {int(num): text.strip() for num, text in lines}

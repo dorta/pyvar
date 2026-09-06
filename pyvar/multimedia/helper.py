@@ -41,7 +41,7 @@ class Multimedia:
         self.devices.get_video_devices()
         self.sink = None
 
-        if not os.path.isfile(self.video_src):
+        if not self.video_src or not os.path.isfile(self.video_src):
             self.dev = self.devices.search_device(self.video_src)
             self.dev_caps = self.get_caps()
 
@@ -133,13 +133,13 @@ class Multimedia:
             sys.exit("Your video device could not capture any image.")
         return frame
 
+
+
     def loop(self):
         """
         Check if the video source still have frames or not.
         """
-        if (not self.sink) or (not self.sink.isOpened()):
-            sys.exit("Your video device could not be initialized. Exiting...")
-        return self.sink.isOpened()
+        return bool(self.sink and self.sink.isOpened())
 
     @staticmethod
     def save(name=None, output_frame=None):
@@ -169,7 +169,9 @@ class Multimedia:
         """
         Release and destroy the video capture from video source.
         """
-        self.sink.release()
+        if self.sink is not None:
+            self.sink.release()
+            self.sink = None
         cv2.destroyAllWindows()
 
 

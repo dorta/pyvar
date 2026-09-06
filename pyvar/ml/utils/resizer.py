@@ -88,6 +88,7 @@ class Resizer:
             with Image.open(self.image_path) as img:            
                 self.image = np.array(img)
                 self.image = self.image[:, :, ::-1].copy()
-                self.image_resized = img.resize((self.model_width, self.model_height))
+                resized = img.resize((self.model_width, self.model_height))
+                self.image_resized = np.array(resized)[:, :, ::-1].copy()
                 if expand_dims:
                     self.image_resized = np.expand_dims(self.image_resized, axis=0)
