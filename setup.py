@@ -19,7 +19,7 @@ setup(name="pyvar",
       license="BSD-3-Clause",
       packages=find_packages(),
       zip_safe=False,
-      keywords = ['variscite', 'ai', 'ml', 'API'],
+      keywords = ['variscite', 'ai', 'ml', 'sdk', 'embedded'],
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Information Technology',
