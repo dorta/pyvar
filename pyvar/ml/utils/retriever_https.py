@@ -9,10 +9,10 @@
 """
 
 import glob
+import logging
 import os
 import shutil
 import socket
-import sys
 import requests
 
 from pyvar.config import CACHEDIR
@@ -40,10 +40,8 @@ class HTTPS:
         self.label = None
         self.image = None
         self.video = None
-        try:
-            os.mkdir(self.cachedir)
-        except FileExistsError:
-            pass
+        os.makedirs(self.cachedir, exist_ok=True)
+        self.logger = logging.getLogger(__name__)
 
     def retrieve_package(self, package_dir=None,
                          package_filename=None,
@@ -76,21 +74,29 @@ class HTTPS:
             elif category == SEGMENTATION:
                 package_dir = DEFAULT_PACKAGES[SEGMENTATION][0]
                 package_filename = DEFAULT_PACKAGES[SEGMENTATION][1]
+            else:
+                raise ValueError("Unsupported model category: {}".format(category))
         
+        if not package_dir or not package_filename:
+            raise ValueError("package_dir and package_filename are required")
+
         package_url = f"{self.host}/{package_dir}/{package_filename}"
         package_file = os.path.join(self.cachedir, package_filename)
+        partial_file = package_file + ".part"
 
         try:
-            r = requests.get(package_url)
-            if r.status_code != 200:
-                return False
-            with open(package_file, "wb") as f:
-                for chunk in r.iter_content(chunk_size=8192):
+            response = requests.get(package_url, timeout=30, stream=True)
+            response.raise_for_status()
+            with open(partial_file, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
                     if chunk:
                         f.write(chunk)
+            os.replace(partial_file, package_file)
             self.retrieved_package = package_file
-        except Exception as ex:
-            print(f"Exc: {ex}")
+        except (requests.RequestException, OSError) as ex:
+            self.logger.error("Could not retrieve %s: %s", package_url, ex)
+            if os.path.exists(partial_file):
+                os.remove(partial_file)
             return False
 
         if self.retrieved_package.endswith(ZIP):
