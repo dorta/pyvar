@@ -46,7 +46,7 @@ class Label:
         else:
             with open(self.labels_file, 'r', encoding='utf-8') as f:
                 if category == CLASSIFICATION:
-                    self.list = [line.strip() for line in f.readlines()]
+                    self.list = [line.strip() for line in f if line.strip()]
                 elif category == DETECTION:
                     p = re.compile(r'\s*(\d+)(.+)')
                     lines = (p.match(line).groups() for line in f.readlines())
