@@ -56,6 +56,7 @@ class EthosuInterpreter:
         self.k = 3
         self.confidence = 0.5
         self.output_image = None
+        self._input_set = False
 
     def set_k(self, k):
         """
@@ -102,6 +103,7 @@ class EthosuInterpreter:
         """
         tensor_index = self.input_details[0]['index']
         self.interpreter.set_input(tensor_index, image)
+        self._input_set = True
 
     def get_output(self, index, squeeze=False):
         """

@@ -96,6 +96,7 @@ class TFLiteInterpreter:
         self.k = DEFAULT_K
         self.confidence = DEFAULT_CONFIDENCE
         self.output_image = None
+        self._input_set = False
 
     def set_k(self, k: int) -> None:
         """
@@ -160,6 +161,7 @@ class TFLiteInterpreter:
             raise TypeError("Image must be a numpy ndarray.")
         tensor_index = self.input_details[0]['index']
         self.interpreter.set_tensor(tensor_index, image)
+        self._input_set = True
 
     def get_output(self, index: int, squeeze: bool = False) -> np.ndarray:
         """
@@ -221,7 +223,7 @@ class TFLiteInterpreter:
 
         :raises RuntimeError: If no input has been set before invoking this method.
         """
-        if not self.interpreter.get_input_details():
+        if not self._input_set:
             raise RuntimeError("No input set. Please call set_input() before run_inference().")
 
         timer = Timer()
