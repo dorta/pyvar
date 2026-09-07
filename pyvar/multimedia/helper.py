@@ -135,6 +135,8 @@ class Multimedia:
 
 
 
+
+    @property
     def loop(self):
         """
         Check if the video source still have frames or not.

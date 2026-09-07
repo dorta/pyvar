@@ -170,7 +170,7 @@ class TFLiteInterpreter:
         :return: Result tensor. If 'squeeze' is True, dimensions of size 1 are removed.
         :raises IndexError: If the provided index is out of range.
         """
-        if index >= len(self.output_details):
+        if index < 0 or index >= len(self.output_details):
             raise IndexError("Index out of range in output_details")
 
         tensor = self.interpreter.get_tensor(self.output_details[index]['index'])

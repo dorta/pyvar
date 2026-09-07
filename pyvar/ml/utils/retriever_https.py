@@ -65,15 +65,15 @@ class HTTPS:
             host_93 = True
 
         if category is not None:
-            if category is CLASSIFICATION:
+            if category == CLASSIFICATION:
                 package_dir = DEFAULT_PACKAGES[CLASSIFICATION][0]
                 package_filename = DEFAULT_PACKAGES[CLASSIFICATION][1]
                 if host_93 is True:
                     package_filename = DEFAULT_PACKAGES[CLASSIFICATION_93][1]
-            elif category is DETECTION:
+            elif category == DETECTION:
                 package_dir = DEFAULT_PACKAGES[DETECTION][0]
                 package_filename = DEFAULT_PACKAGES[DETECTION][1]
-            elif category is SEGMENTATION:
+            elif category == SEGMENTATION:
                 package_dir = DEFAULT_PACKAGES[SEGMENTATION][0]
                 package_filename = DEFAULT_PACKAGES[SEGMENTATION][1]
         
@@ -113,10 +113,10 @@ class HTTPS:
         self.model = model_list[0]
         label_list = glob.glob(os.path.join(package_name_path, TXT))
         self.label = label_list[0]
-        if category is CLASSIFICATION:
+        if category == CLASSIFICATION:
             image_list = glob.glob(os.path.join(package_name_path, JPG))
             self.image = image_list[0]
-        if category is DETECTION:
+        if category == DETECTION:
             image_list = glob.glob(os.path.join(package_name_path, PNG))
             self.image = image_list[0]
         video_list = glob.glob(os.path.join(package_name_path, MP4))
