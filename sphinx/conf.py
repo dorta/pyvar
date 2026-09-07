@@ -16,7 +16,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.extlinks']
 
 
-release = '0.0.1'
+release = __version__
 project = 'Variscite LTD'
 copyright = '2021-2025 Variscite LTD'
 author = 'Variscite LTD'

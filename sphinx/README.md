@@ -1,6 +1,6 @@
 ## SDK Documentation
 
-The API documentation can be generated using [sphinx][sphinx_page]. Please
+The SDK documentation can be generated using [sphinx][sphinx_page]. Please
 follow the below steps to build the documentation:
 
 1. Clone the `pyvar` repository:
@@ -13,10 +13,10 @@ $ git clone https://github.com/varigit/pyvar.git
 
 ```bash
 $ apt install python3-sphinx
-$ pip3 install sphinx_press_theme
+$ pip3 install -r requirements.txt
 ```
 
-3. Build the API in the HTML format:
+3. Build the SDK in the HTML format:
 
 ```bash
 $ cd sphinx/
