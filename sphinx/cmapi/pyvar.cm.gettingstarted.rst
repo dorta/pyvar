@@ -1,10 +1,10 @@
-Cortex-M API: Getting Started
+Cortex-M interface: Getting Started
 =============================
 
 Introduction
 ------------
 
-The Cortex-M API provides a set of functions and methods to help run and communicate
+The Cortex-M interface provides a set of functions and methods to help run and communicate
 with Cortex-M applications from the Cortex-A side.
 
 Software
@@ -26,10 +26,10 @@ Setting Up the BSP
 1. Flash the built image into the SD Card, boot the board, then go to the next section.
 
 
-Python API Package Installation
+Python SDK Package Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. To install the pyvar API Python package use the pip3 tool to retrieve via Pypi:
+1. To install the pyvar SDK Python package use the pip3 tool to retrieve via Pypi:
 
     .. code-block:: console
 
@@ -49,7 +49,7 @@ Python API Package Installation
 Quick Example
 ~~~~~~~~~~~~~
 
-See this quick example to run a Cortex-M application using the Cortex-M API:
+See this quick example to run a Cortex-M application using the Cortex-M interface:
 
     .. code-block:: python
 

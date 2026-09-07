@@ -1,4 +1,4 @@
-Variscite Python API
+Variscite Python SDK
 ====================
 
 .. image:: https://img.shields.io/pypi/v/pyvar?style=for-the-badge
@@ -13,7 +13,7 @@ Variscite Python API
 Overview
 --------
 
-The **Variscite Python API** known as **pyvar** is a set of high-level abstractions that
+The **Variscite Python SDK** known as **pyvar** is a set of high-level abstractions that
 allows beginning users to develop their own applications pertaining to machine learning,
 multimedia, and more. This package aims to provide classes that you can easily import
 and use on your project, and it also includes quick source code examples to help
@@ -30,7 +30,7 @@ Release History
 ~~~~~~~~~~~~~~~
 
 +----------------+--------------------------+-------------------------------+--------------+--------------+
-| API Release    | i.MX 8M Plus |br|        | TFLite                        | Ethosu       | Date         |
+| SDK Release    | i.MX 8M Plus |br|        | TFLite                        | Ethosu       | Date         |
 |                | BSP Release              |                               |              |              |
 +================+==========================+===============================+==============+==============+
 | `v1.2.1`_      | `6.6.23_2.0.0-v1.1`_     | 2.15.0                        | N/A          | 20/12/2024   |
@@ -64,7 +64,7 @@ Release History
 Quick Examples
 ~~~~~~~~~~~~~~
 
-To learn more about how to use the pyvar API, see our guide on how to run `quick examples`_.
+To learn more about how to use the pyvar SDK, see our guide on how to run `quick examples`_.
 
 .. _quick examples: https://python.variscite.com/pyvar.quickexamples.html
 

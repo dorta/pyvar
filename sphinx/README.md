@@ -1,4 +1,4 @@
-## API Documentation
+## SDK Documentation
 
 The API documentation can be generated using [sphinx][sphinx_page]. Please
 follow the below steps to build the documentation:

@@ -1,4 +1,4 @@
-Machine Learning API: Getting Started
+Machine Learning module: Getting Started
 =====================================
 
 Introduction

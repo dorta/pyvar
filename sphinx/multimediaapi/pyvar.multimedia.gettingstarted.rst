@@ -1,10 +1,10 @@
-Multimedia API: Getting Started
+Multimedia module: Getting Started
 ===============================
 
 Introduction
 ------------
 
-The Multimedia API provides a set of classes and functions providing an easy way to
+The Multimedia module provides a set of classes and functions providing an easy way to
 write multimedia applications for the Variscite's SoMs, such as capturing and
 displaying images using cameras, playing videos, and so on.
 
@@ -14,7 +14,7 @@ Hardware
 Supported Cameras
 ~~~~~~~~~~~~~~~~~
 
-The pyvar package's `Multimedia API`_ supports the following cameras:
+The pyvar package's `Multimedia module`_ supports the following cameras:
 
 * `VCAM-5640S-DUO`_;
 * `VCAM-AR0821N`_. To use the Basler one, please see this `tutorial`_.
@@ -25,7 +25,7 @@ The pyvar package's `Multimedia API`_ supports the following cameras:
 
 .. _tutorial: https://variwiki.com/index.php?title=MX8_Basler_Camera_NXP
 
-.. _Multimedia API: https://python.variscite.com/multimediaapi/pyvar.multimedia.html
+.. _Multimedia module: https://python.variscite.com/multimediaapi/pyvar.multimedia.html
 
 See this quick example to open a camera using the multimedia API:
 
@@ -76,10 +76,10 @@ Setting up the BSP
 
 1. Flash the built image into the SD Card, boot the board, then go to the next section.
 
-Python API Package Installation
+Python SDK Package Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. To install the pyvar API Python package use the pip3 tool to retrieve it via Pypi:
+1. To install the pyvar SDK Python package use the pip3 tool to retrieve it via Pypi:
 
     .. code-block:: console
 

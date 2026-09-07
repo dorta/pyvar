@@ -14,10 +14,10 @@ model training, and model quantization, although those are extensive subjects.
 Software
 --------
 
-Python API Package Installation
+Python SDK Package Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. To install the pyvar API Python package use the pip3 tool to retrieve it via Pypi:
+1. To install the pyvar SDK Python package use the pip3 tool to retrieve it via Pypi:
 
     .. code-block:: console
 

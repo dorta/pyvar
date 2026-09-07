@@ -1,4 +1,4 @@
-Cortex-M API
+Cortex-M interface
 ====================
 
 |cm-cover|

@@ -1,4 +1,4 @@
-Machine Learning API
+Machine Learning module
 ====================
 
 |ml-cover|

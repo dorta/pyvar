@@ -1,4 +1,4 @@
-Multimedia API
+Multimedia module
 ==============
 
 .. toctree::

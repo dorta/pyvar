@@ -52,8 +52,8 @@ For more information, please see the [python.variscite.com/software](https://pyt
 
 The full documentation is available at the [python.variscite.com](https://python.variscite.com/) page. See a few examples at the following links:
 
-* [Python API Examples](https://python.variscite.com/pyvar.quickexamples.html)
-* [Python API GitHub Repository](https://github.com/varigit/pyvar/tree/master/examples/ml)
+* [Python SDK Examples](https://python.variscite.com/pyvar.quickexamples.html)
+* [Python SDK GitHub Repository](https://github.com/varigit/pyvar/tree/master/examples/ml)
 * [Variscite Demo's Repository](https://github.com/varigit/var-demos/tree/master/machine-learning-demos)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
