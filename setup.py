@@ -21,7 +21,7 @@ setup(name="pyvar",
       zip_safe=False,
       keywords = ['variscite', 'ai', 'ml', 'sdk', 'embedded'],
       python_requires=">=3.7",
-      install_requires=['numpy', 'Pillow', 'requests'],
+      install_requires=['numpy', 'Pillow', 'requests', 'pyserial'],
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Information Technology',
